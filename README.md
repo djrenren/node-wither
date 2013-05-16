@@ -1,4 +1,4 @@
-node-wither
+Wither
 ===========
 
 A feature-full decorator library for node.js
