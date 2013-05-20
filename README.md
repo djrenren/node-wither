@@ -6,6 +6,7 @@ A feature-full decorator library for node.js
 
 ###handle(func, [type], handler)
 type is optional and can be:
+
 * Name of a precondition
 * Error Type
 
@@ -62,14 +63,14 @@ function divide(a, b){
 }
 
 divide = wither.pre(divide, 'not-zero', function(a, b){
-  return a != 0;
+  return b != 0;
 });
 
 divide = wither.handle(divide, 'not-zero', function(e, a, b){
   console.log("Everything is not shiny!")
 });
 
-divide(1/0); // Everything is not shiny!;
+divide(1,0); // Everything is not shiny!;
 ```
 
 ###post(func, [name], condition)
